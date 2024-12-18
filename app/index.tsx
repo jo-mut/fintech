@@ -36,7 +36,7 @@ export default function Page() {
                         style='flex-1 bg-white'
                         label='Sign Up'
                         color='text-black'
-                        onPress={() => router.push('/(auth)/sign-up')} />
+                        onPress={() => router.push('/(auth)/email-sign-up')} />
                 </View>
             </View>
         </SafeAreaView>

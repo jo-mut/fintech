@@ -2,10 +2,11 @@ import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, 
 import React from 'react'
 
 interface InputFieldProps {
+    icon?: string,
     containerStyle?: string,
     label?: string;
     keyboardType?: string;
-    secureTextEntry?: string
+    secureTextEntry?: boolean
     inputStyle?: string
     [key: string]: any
 }

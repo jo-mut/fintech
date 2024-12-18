@@ -83,7 +83,7 @@ const Page = (type: SignInType) => {
   }
 
   const handleLogin = () => {
-    router.push('/(screens)/(tabs)/home')
+    router.push('/(auth)/login-with-email')
   }
 
 
@@ -118,7 +118,7 @@ const Page = (type: SignInType) => {
               <InputField
                 containerStyle='flex-1 bg-gray-300'
                 placeholder='Phone number'
-                value={countryCode}
+                value={phoneNumber}
                 onChangeText={(value: string) => {
                   setPhoneNumber(value)
                 }}

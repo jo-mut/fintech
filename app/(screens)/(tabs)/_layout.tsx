@@ -4,6 +4,7 @@ import { Platform } from 'react-native';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import IconView from '@/components/IconView';
+import { Icons } from '@/constants/Icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -27,7 +28,7 @@ export default function TabLayout() {
           title: 'Home',
           tabBarIcon: ({ color, focused }) =>
             <IconView
-              icon="home"
+              icon={Icons.home}
               color={focused ? 'bg-blue-500' : 'bg-black'}
             />
         }}
@@ -38,7 +39,7 @@ export default function TabLayout() {
           title: 'Invest',
           tabBarIcon: ({ color, focused }) =>
             <IconView
-              icon="home"
+              icon={Icons.investment}
               color={focused ? 'bg-blue-500' : 'bg-black'}
             />
         }}
@@ -49,7 +50,7 @@ export default function TabLayout() {
           title: 'Transfer',
           tabBarIcon: ({ color, focused }) =>
             <IconView
-              icon="home"
+              icon={Icons.transfer}
               color={focused ? 'bg-blue-500' : 'bg-black'}
             />
         }}
@@ -60,7 +61,7 @@ export default function TabLayout() {
           title: 'Crypto',
           tabBarIcon: ({ color, focused }) =>
             <IconView
-              icon="home"
+              icon={Icons.crypto}
               color={focused ? 'bg-blue-500' : 'bg-black'}
             />
         }}
@@ -71,7 +72,7 @@ export default function TabLayout() {
           title: 'Lifestyle',
           tabBarIcon: ({ color, focused }) =>
             <IconView
-              icon="home"
+              icon={Icons.lifestyle}
               color={focused ? 'bg-blue-500' : 'bg-black'}
             />
         }}

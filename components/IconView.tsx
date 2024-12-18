@@ -8,7 +8,7 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = ({ icon, color }) => {
     return (
-        <View className=''>
+        <View className='p-3'>
             <Image
                 source={icon}
                 tintColor={color}

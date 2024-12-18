@@ -20,6 +20,7 @@
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/native": "^7.0.0",
+    "date-fns": "^4.1.0",
     "expo": "~52.0.18",
     "expo-asset": "~11.0.1",
     "expo-av": "^15.0.1",
@@ -44,11 +45,17 @@
     "react-native": "0.76.5",
     "react-native-confirmation-code-field": "^7.4.0",
     "react-native-gesture-handler": "~2.20.2",
+    "react-native-ios-context-menu": "^2.5.3",
+    "react-native-ios-utilities": "^4.5.1",
+    "react-native-mmkv": "^3.2.0",
+    "react-native-modal": "^13.0.1",
     "react-native-reanimated": "^3.16.5",
     "react-native-safe-area-context": "^5.0.0",
     "react-native-screens": "~4.1.0",
     "react-native-web": "~0.19.13",
-    "react-native-webview": "13.12.5"
+    "react-native-webview": "13.12.5",
+    "zeego": "^2.0.4",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

@@ -3239,6 +3239,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/query-core@npm:5.62.8"
+  checksum: d203a4062d271dce5f18c472d7a32e61ce3ae2a696a87f934ef306e562f6cdd72ae1f93c5e81f08567d66e7ae11a7be08622a239415dbca773015777b78b03e6
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.62.8":
+  version: 5.62.8
+  resolution: "@tanstack/react-query@npm:5.62.8"
+  dependencies:
+    "@tanstack/query-core": 5.62.8
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: c1e2773c261dcf6527d57906b0f4ba9302d617515fcd092ef205cf7d2ec4c46d9c121d3e79a044341f26de6b2839981011e34343b572466d2c514e46fef5bcd9
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -10647,6 +10665,7 @@ __metadata:
     "@expo/vector-icons": ^14.0.2
     "@react-navigation/bottom-tabs": ^7.0.0
     "@react-navigation/native": ^7.0.0
+    "@tanstack/react-query": ^5.62.8
     "@types/jest": ^29.5.12
     "@types/react": ~18.3.12
     "@types/react-test-renderer": ^18.3.0

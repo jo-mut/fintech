@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
         if (type === "rounded") {
             return "rounded-full p-5"
         } else {
-            return "rounded-3xl p-4"
+            return "rounded-3xl py-3 px-8"
         }
     }
 

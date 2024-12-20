@@ -5,6 +5,8 @@ import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import IconView from '@/components/IconView';
 import { Icons } from '@/constants/Icons';
+import PageNav from '@/components/page-nav';
+import { BlurView } from 'expo-blur';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -13,11 +15,20 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
+        tabBarBackground: () => (
+          <BlurView
+            intensity={50}
+            tint='extraLight'
+            className='flex-1 bg-[rgba(0,0,0,0.5)]'
+          />
+        ),
+        headerShown: true,
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
+            backgroundColor: 'transparent',
             position: 'absolute',
+            borderTopWidth: 0,
           },
           default: {},
         }),
@@ -26,6 +37,14 @@ export default function TabLayout() {
         name="home"
         options={{
           title: 'Home',
+          headerTransparent: true,
+          header: () => (
+            <PageNav
+              firstName='Auson'
+              lastName='Souon'
+              left={true}
+              right={true} />
+          ),
           tabBarIcon: ({ color, focused }) =>
             <IconView
               icon={Icons.home}
@@ -37,6 +56,14 @@ export default function TabLayout() {
         name="invest"
         options={{
           title: 'Invest',
+          headerTransparent: true,
+          header: () => (
+            <PageNav
+              firstName='Auson'
+              lastName='Souon'
+              left={true}
+              right={true} />
+          ),
           tabBarIcon: ({ color, focused }) =>
             <IconView
               icon={Icons.investment}

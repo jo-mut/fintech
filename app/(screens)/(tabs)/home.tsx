@@ -31,10 +31,6 @@ const Home = () => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         className='flex-1 mx-5' >
-        <PageNav
-          left={true}
-          right={true}
-        />
         <View className='flex flex-row items-center justify-center mt-20 gap-1'>
           <Text className='text-4xl font-bold'>{balance()}</Text>
           <Text className='text-4xl font-bold'>$</Text>

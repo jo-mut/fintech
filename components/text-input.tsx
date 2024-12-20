@@ -14,7 +14,7 @@ interface InputFieldProps {
 const InputField: React.FC<InputFieldProps> =
     ({ label, inputStyle, containerStyle, ...props }: any) => {
         return (
-            <View className={`${containerStyle} rounded-2xl p-4`}>
+            <View className={`${containerStyle}`}>
                 <TextInput
                     className={`${inputStyle}`}
                     {...props} />

@@ -75,6 +75,14 @@ export default function TabLayout() {
         name="transfer"
         options={{
           title: 'Transfer',
+          headerTransparent: true,
+          header: () => (
+            <PageNav
+              firstName='Auson'
+              lastName='Souon'
+              left={true}
+              right={true} />
+          ),
           tabBarIcon: ({ color, focused }) =>
             <IconView
               icon={Icons.transfer}
@@ -86,6 +94,14 @@ export default function TabLayout() {
         name="crypto"
         options={{
           title: 'Crypto',
+          headerTransparent: true,
+          header: () => (
+            <PageNav
+              firstName='Auson'
+              lastName='Souon'
+              left={true}
+              right={true} />
+          ),
           tabBarIcon: ({ color, focused }) =>
             <IconView
               icon={Icons.crypto}
@@ -97,6 +113,14 @@ export default function TabLayout() {
         name="lifestyle"
         options={{
           title: 'Lifestyle',
+          headerTransparent: true,
+          header: () => (
+            <PageNav
+              firstName='Auson'
+              lastName='Souon'
+              left={true}
+              right={true} />
+          ),
           tabBarIcon: ({ color, focused }) =>
             <IconView
               icon={Icons.lifestyle}

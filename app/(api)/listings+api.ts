@@ -2,28 +2,29 @@
 const API_KEY = process.env.CRYPTO_API_KEY;
 
 export async function GET(req: Request) {
-    const limit = new URL(req.url).searchParams.get('limit') || 10
-    const sortBy = new URL(req.url).searchParams.get('sortBy') || "rank";
-    const page = new URL(req.url).searchParams.get('page') || 1;
+    // const limit = new URL(req.url).searchParams.get('limit') || 10
+    // const sortBy = new URL(req.url).searchParams.get('sortBy') || "rank";
+    // const page = new URL(req.url).searchParams.get('page') || 1;
 
-    try {
-        const response = await fetch(
-            `https://openapiv1.coinstats.app/coins?page=${page}&limit=${limit}&sortBy=${sortBy}`,
-            {
-                headers: {
-                    accept: 'application/json',
-                    'X-API-KEY': API_KEY!,
-                },
-            }
-        );
+    // try {
+    //     const response = await fetch(
+    //         `https://openapiv1.coinstats.app/coins?page=${page}&limit=${limit}&sortBy=${sortBy}`,
+    //         {
+    //             headers: {
+    //                 accept: 'application/json',
+    //                 'X-API-KEY': API_KEY!,
+    //             },
+    //         }
+    //     );
 
-        const result = await response.json();
-        return Response.json({ data: result }, { status: 201 })
-    } catch (error) {
-        return Response.json({ error: error }, { status: 500 })
-    }
+    //     const result = await response.json();
+    //     return Response.json({ data: result }, { status: 201 })
+    // } catch (error) {
+    //     return Response.json({ error: error }, { status: 500 })
+    // }
 
-    // return data;
+    return Response.json(data, { status: 200 });
+
 }
 
 const data = {

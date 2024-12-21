@@ -2,26 +2,28 @@
 const API_KEY = process.env.CRYPTO_API_KEY;
 
 export async function GET(req: Request) {
-    // const id = new URL(req.url).searchParams.get('id') || 1;
+    const name = new URL(req.url).searchParams.get('name') || "bitcoin";
 
-    // try {
-    //     const response = await fetch(
-    //         `https://openapiv1.coinstats.app/coins?id=${id}`,
-    //         {
-    //             headers: {
-    //                 accept: 'application/json',
-    //                 'X-API-KEY': API_KEY!,
-    //             },
-    //         }
-    //     );
+    console.log("url name: ", name)
 
-    //     const result = await response.json();
-    //     return Response.json({ data: result }, { status: 201 })
-    // } catch (error) {
-    //     return Response.json({ error: error }, { status: 500 })
-    // }
+    try {
+        const response = await fetch(
+            `https://openapiv1.coinstats.app/coins/${name}`,
+            {
+                headers: {
+                    accept: 'application/json',
+                    'X-API-KEY': API_KEY!,
+                },
+            }
+        );
 
-    return data;
+        const result = await response.json();
+        return Response.json({ data: result }, { status: 201 })
+    } catch (error) {
+        return Response.json({ error: error }, { status: 500 })
+    }
+
+    // return data;
 }
 
 const data = {

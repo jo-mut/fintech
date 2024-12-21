@@ -23,3 +23,17 @@ export interface Currency {
 	twitterUrl: string;
 	explorers: string[];
 }
+
+
+export interface Result {
+	_created_at: string;
+	_updated_at: string;
+	exchange: string;
+	from: string;
+	pair: string;
+	pairPrice: number;
+	pairVolume: number;
+	price: number;
+	to: string;
+	volume: number;
+}

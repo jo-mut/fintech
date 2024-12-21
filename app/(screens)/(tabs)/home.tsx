@@ -30,12 +30,12 @@ const Home = () => {
     <SafeAreaView className='flex-1'>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        className='flex-1 mx-5' >
-        <View className='flex flex-row items-center justify-center mt-20 gap-1'>
+        className='flex-1' >
+        <View className='flex flex-row items-center justify-center mx-5 mt-20 gap-1'>
           <Text className='text-4xl font-bold'>{balance()}</Text>
           <Text className='text-4xl font-bold'>$</Text>
         </View>
-        <View className='items-center justify-center'>
+        <View className='items-center justify-center mx-5'>
           <Button
             style='bg-gray-300 mt-3'
             onPress={() => {
@@ -44,7 +44,7 @@ const Home = () => {
             label='Account'
             color='black' />Ì
         </View>
-        <View className='flex flex-row mt-20 justify-between gap-3 px-5'>
+        <View className='flex flex-row mt-20 justify-between gap-3 px-5 mx-5'>
           <View className='items-center justify-center'>
             <Button
               type="rounded"
@@ -76,10 +76,11 @@ const Home = () => {
             <DropDown></DropDown>
           </View>
         </View>
-        <View className='flex-1 mt-5'>
+        <View className='flex-1 mt-5 mx-5'>
           <Text className='text-2xl font-bold'>Transactions</Text>
           {transactions.map((transaction) => (
             <ListItem
+              type='transaction'
               title={transaction.title}
               id={transaction.id}
               date={transaction.date}

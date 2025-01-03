@@ -108,7 +108,7 @@ const Page = (type: SignInType) => {
             </View>
             <View className='flex flex-row mt-10 gap-3'>
               <InputField
-                containerStyle='bg-gray-300 w-[60]'
+                containerStyle='bg-gray-300 w-[60] rounded-3xl p-4 '
                 placeholder='Country code'
                 value={countryCode}
                 onChangeText={(value: string) => {
@@ -116,7 +116,7 @@ const Page = (type: SignInType) => {
                 }}
                 keyboardType='numeric' />
               <InputField
-                containerStyle='flex-1 bg-gray-300'
+                containerStyle='flex-1 bg-gray-300 rounded-3xl p-4 '
                 placeholder='Phone number'
                 value={phoneNumber}
                 onChangeText={(value: string) => {
@@ -131,7 +131,7 @@ const Page = (type: SignInType) => {
             <View className='flex-1 justify-end'>
               <View>
                 <Button
-                  style='bg-gray-700'
+                  style='bg-gray-700 p-4'
                   label='Continue'
                   color='text-white'
                   onPress={() => (continueToConfirmation())} />
@@ -141,7 +141,7 @@ const Page = (type: SignInType) => {
                   <View className='h-[0.1] flex-1 bg-gray-700 my-5' />
                 </View>
                 <Button
-                  style='bg-gray-300'
+                  style='bg-gray-300 p-4'
                   label='Continue with email'
                   color='text-black'
                   onPress={() => {

@@ -7,6 +7,7 @@ import { router } from 'expo-router';
 interface ListItemProps {
     type?: string;
     avatar?: any;
+    initials: string;
     amount?: number;
     id?: string;
     title?: string;
@@ -20,6 +21,7 @@ interface ListItemProps {
 const ListItem: React.FC<ListItemProps> = ({
     type,
     subTitle,
+    initials,
     avatar,
     amount,
     id,
@@ -29,7 +31,12 @@ const ListItem: React.FC<ListItemProps> = ({
     date,
     onPress
 }) => {
-    const formattedDate = date ? format(new Date(date!), "yyyy-MM-dd HH:mm") : null;   
+    const formattedDate = date ? format(new Date(date!), "yyyy-MM-dd HH:mm") : null;
+
+    const handleOnPress = (avatar: any) => {
+        router.push("/(screens)/account")
+    }
+
     return (
         <TouchableOpacity
             onPress={() => onPress()}
@@ -37,11 +44,15 @@ const ListItem: React.FC<ListItemProps> = ({
             <View key={id} className='flex flex-row items-center justify-center'>
                 <View className='justify-center items-center bg-gray-300
              w-12 h-12 rounded-full mr-3'>
-                    <TouchableOpacity>
-                        <Image
-                            className={avatar ? "w-10 h-10" : "w-6 h-6"}
-                            resizeMode='contain'
-                            source={avatar ? { uri: avatar } : Icons.add} />
+                    <TouchableOpacity
+                        onPress={() => handleOnPress(avatar)}>
+                        {avatar ?
+                            <Image
+                                className={avatar ? "w-10 h-10" : "w-6 h-6"}
+                                resizeMode='contain'
+                                source={avatar ? { uri: avatar } : Icons.add} />
+                            :
+                            <Text className='text-lg text-black font-bold'>{initials}</Text>}
                     </TouchableOpacity>
                 </View>
                 {type === "transaction" &&

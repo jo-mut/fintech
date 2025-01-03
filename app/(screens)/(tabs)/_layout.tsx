@@ -53,44 +53,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="invest"
-        options={{
-          title: 'Invest',
-          headerTransparent: true,
-          header: () => (
-            <PageNav
-              firstName='Auson'
-              lastName='Souon'
-              left={true}
-              right={true} />
-          ),
-          tabBarIcon: ({ color, focused }) =>
-            <IconView
-              icon={Icons.investment}
-              color={focused ? 'bg-blue-500' : 'bg-black'}
-            />
-        }}
-      />
-      <Tabs.Screen
-        name="transfer"
-        options={{
-          title: 'Transfer',
-          headerTransparent: true,
-          header: () => (
-            <PageNav
-              firstName='Auson'
-              lastName='Souon'
-              left={true}
-              right={true} />
-          ),
-          tabBarIcon: ({ color, focused }) =>
-            <IconView
-              icon={Icons.transfer}
-              color={focused ? 'bg-blue-500' : 'bg-black'}
-            />
-        }}
-      />
-      <Tabs.Screen
         name="crypto"
         options={{
           title: 'Crypto',
@@ -105,6 +67,25 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) =>
             <IconView
               icon={Icons.crypto}
+              color={focused ? 'bg-blue-500' : 'bg-black'}
+            />
+        }}
+      />
+      <Tabs.Screen
+        name="invest"
+        options={{
+          title: 'Invest',
+          headerTransparent: true,
+          header: () => (
+            <PageNav
+              firstName='Auson'
+              lastName='Souon'
+              left={true}
+              right={true} />
+          ),
+          tabBarIcon: ({ color, focused }) =>
+            <IconView
+              icon={Icons.investment}
               color={focused ? 'bg-blue-500' : 'bg-black'}
             />
         }}

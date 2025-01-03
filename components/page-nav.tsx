@@ -24,9 +24,12 @@ const PageNav: React.FC<PageNavProps> = ({
     const avatar = () => {
         const initials = firstName!.charAt(0).toUpperCase() + lastName!.charAt(0).toUpperCase();
         return (
-            <View className='w-10 h-10 rounded-full mr-4 items-center bg-gray-700 justify-center'>
-                <Text className='text-lg text-white'>{initials}</Text>
-            </View>
+            <TouchableOpacity
+                onPress={() => router.push("/(screens)/account")}>
+                <View className='w-10 h-10 rounded-full mr-4 items-center bg-gray-700 justify-center'>
+                    <Text className='text-lg text-white'>{initials}</Text>
+                </View>
+            </TouchableOpacity>
         )
     }
 
@@ -63,7 +66,7 @@ const PageNav: React.FC<PageNavProps> = ({
         <BlurView
             intensity={50}
             tint='extraLight'
-            style={{paddingTop: top}}
+            style={{ paddingTop: top }}
             className='flex-1 px-5'>
             <View className='flex-row items-center'>
                 <View className='flex-row flex-1'>

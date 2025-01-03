@@ -113,7 +113,7 @@ const SignUp = () => {
                         </View>
                         <View className='flex-1'>
                             <InputField
-                                containerStyle='mt-5 bg-gray-300'
+                                containerStyle='rounded-3xl p-4 mt-5 bg-gray-300'
                                 label="Name"
                                 placeholder="Enter your name"
                                 value={form.name}
@@ -125,7 +125,7 @@ const SignUp = () => {
                                 }}
                                 keyboardType='numeric' />
                             <InputField
-                                containerStyle='mt-5 bg-gray-300'
+                                containerStyle='rounded-3xl p-4 mt-5 bg-gray-300'
                                 label="Email"
                                 placeholder="Enter your email"
                                 value={form.email}
@@ -138,7 +138,7 @@ const SignUp = () => {
                                 keyboardType='numeric' />
 
                             <InputField
-                                containerStyle='mt-5 bg-gray-300'
+                                containerStyle='rounded-3xl p-4 mt-5 bg-gray-300'
                                 label="Password"
                                 placeholder="Enter your password"
                                 value={form.password}
@@ -152,7 +152,7 @@ const SignUp = () => {
 
                             <View className='flex-1 justify-end'>
                                 <Button
-                                    style='bg-gray-800'
+                                    style='p-4 bg-gray-800'
                                     label='Sign Up'
                                     color='text-white'
                                     onPress={() => (onSignUpPress())} />

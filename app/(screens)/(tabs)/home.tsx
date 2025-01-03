@@ -6,18 +6,30 @@ import DropDown from '@/components/drop-down-menu'
 import { useBalanceStore } from '@/store/balace-store'
 import ListItem from '@/components/list-item'
 import PageNav from '@/components/page-nav'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 const Home = () => {
   const { balance, runTransaction, transactions, clearTransactions } = useBalanceStore()
-
+  const { top } = useSafeAreaInsets();
+  const random = Math.random() > 0.5;
   console.log(transactions)
+
+  const randomInitials = () => {
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    const firstLetter = letters[Math.floor(Math.random() * letters.length)].toUpperCase();
+    const secondLeter = letters[Math.floor(Math.random() * letters.length)].toUpperCase();
+
+    return firstLetter + secondLeter;
+  }
 
   const addMoney = () => {
     runTransaction({
       id: Math.random().toString(),
-      amount: Math.floor(Math.random() * 1000 * (Math.random() > 0.5 ? 1 : -1)),
+      amount: Math.floor(Math.random() * 1000 * (random ? -1 : 1)),
       date: new Date(),
-      title: "Add money"
+      initials: randomInitials(),
+      title: (random ? "Sent" : "Received"),
+      type: (random ? "sent" : "received"),
     })
   }
 
@@ -27,24 +39,28 @@ const Home = () => {
   }, [])
 
   return (
-    <SafeAreaView className='flex-1'>
+    <SafeAreaView
+      className='flex-1'>
       <ScrollView
         showsVerticalScrollIndicator={false}
-        className='flex-1' >
-        <View className='flex flex-row items-center justify-center mx-5 mt-20 gap-1'>
-          <Text className='text-4xl font-bold'>{balance()}</Text>
-          <Text className='text-4xl font-bold'>$</Text>
+        style={{ paddingTop: top }}
+        className={`flex-1`} >
+        <View className='bg-gray-300 rounded-3xl pb-20 m-[20]'>
+          <View className='flex flex-row items-center justify-center mx-5 mt-20 gap-1'>
+            <Text className='text-4xl font-bold'>{balance()}</Text>
+            <Text className='text-4xl font-bold'>$</Text>
+          </View>
+          <View className='items-center justify-center mx-5'>
+            <Button
+              style='bg-gray-500 mt-3 py-3 px-8'
+              onPress={() => {
+                addMoney()
+              }}
+              label='Account'
+              color='text-black' />Ì
+          </View>
         </View>
-        <View className='items-center justify-center mx-5'>
-          <Button
-            style='bg-gray-300 mt-3'
-            onPress={() => {
-              addMoney()
-            }}
-            label='Account'
-            color='black' />Ì
-        </View>
-        <View className='flex flex-row mt-20 justify-between gap-3 px-5 mx-5'>
+        <View className='flex flex-row justify-between gap-3 px-5 mx-5'>
           <View className='items-center justify-center'>
             <Button
               type="rounded"
@@ -80,6 +96,8 @@ const Home = () => {
           <Text className='text-2xl font-bold'>Transactions</Text>
           {transactions.map((transaction) => (
             <ListItem
+              onPress={() => ({})}
+              initials={transaction.initials}
               type='transaction'
               title={transaction.title}
               id={transaction.id}

@@ -4128,7 +4128,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:^1.2.3, base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
+"base64-js@npm:^1.2.3, base64-js@npm:^1.3.0, base64-js@npm:^1.3.1, base64-js@npm:^1.5.1":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
   checksum: 669632eb3745404c2f822a18fc3a0122d2f9a7a13f7fb8b5823ee19d1d2ff9ee5b52c53367176ea4ad093c332fd5ab4bd0ebae5a8e27917a4105a4cfc86b1005
@@ -5821,6 +5821,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-crypto@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "expo-crypto@npm:14.0.1"
+  dependencies:
+    base64-js: ^1.3.0
+  peerDependencies:
+    expo: "*"
+  checksum: 243e3502ba550ee6e78dec39482a0e8ff3e1ec0b950076bae8ed68d7c5cc52872a519d43ba6b15cb6f998f579055115d1ac9f531a74924514abed4b605aa346e
+  languageName: node
+  linkType: hard
+
 "expo-dev-client@npm:~5.0.6":
   version: 5.0.6
   resolution: "expo-dev-client@npm:5.0.6"
@@ -5900,6 +5911,26 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: c4fec86f6c57c5b8d6ab0e19dff43bcffa2abdf37dbb785d4498e834ac2187ea2e4ea52e12f156ec1e8b02b8888b0aa055cd7ca033da520c67ce0159f88074d4
+  languageName: node
+  linkType: hard
+
+"expo-image-loader@npm:~5.0.0":
+  version: 5.0.0
+  resolution: "expo-image-loader@npm:5.0.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 7741b4b926124a1f85e51b0b8c8c9adc37fccf0654eaa0e715cb55cffc716bdc149c0421120f9bec69a69643d3328ec8562899b4aa37a0fdcecfb6fe3cf6f985
+  languageName: node
+  linkType: hard
+
+"expo-image-picker@npm:~16.0.3":
+  version: 16.0.3
+  resolution: "expo-image-picker@npm:16.0.3"
+  dependencies:
+    expo-image-loader: ~5.0.0
+  peerDependencies:
+    expo: "*"
+  checksum: b5a35d51cdabf5ca23013e69fe3f8250f7828ecb3c74840b058e969d80c009797e994a39a44e77f8b47711b6766ce62b6eece5d4cc7053784a99634b1485669c
   languageName: node
   linkType: hard
 
@@ -10898,9 +10929,11 @@ __metadata:
     expo-av: ^15.0.1
     expo-blur: ^14.0.1
     expo-constants: ~17.0.3
+    expo-crypto: ^14.0.1
     expo-dev-client: ~5.0.6
     expo-font: ~13.0.1
     expo-haptics: ~14.0.0
+    expo-image-picker: ~16.0.3
     expo-linking: ~7.0.3
     expo-router: 4.0.11
     expo-secure-store: ^14.0.0

@@ -6,7 +6,9 @@ export interface Transaction {
   id: string;
   amount: number;
   date: Date;
+  initials: string;
   title: string;
+  type: string;
 }
 
 export interface BalanceState {

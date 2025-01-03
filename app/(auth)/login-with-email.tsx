@@ -78,7 +78,7 @@ const SignIn = () => {
                     </View>
                     <View className='flex-1 p-5'>
                         <InputField
-                            containerStyle='mt-5 bg-gray-300'
+                            containerStyle='rounded-3xl p-4 mt-5 bg-gray-300'
                             label="Email"
                             placeholder="Enter your email"
                             icon={''}
@@ -91,7 +91,7 @@ const SignIn = () => {
                             }}
                         />
                         <InputField
-                            containerStyle='mt-5 bg-gray-300'
+                            containerStyle='rounded-3xl p-4 mt-5 bg-gray-300'
                             label="Password"
                             placeholder="Enter your password"
                             icon={''}
@@ -106,7 +106,7 @@ const SignIn = () => {
 
                         <View className='flex-1 justify-end'>
                             <Button
-                                style='mt-6 bg-gray-700'
+                                style='p-4 mt-6 bg-gray-700'
                                 label='Sign In'
                                 color='text-white'
                                 onPress={() => (onSignInPress())} />

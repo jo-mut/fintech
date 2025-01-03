@@ -11,7 +11,7 @@ export default function Page() {
 
     if (isSignedIn) {
         return <Redirect href={'/(screens)/(tabs)/home'} />
-      }    
+    }
 
     return (
         <SafeAreaView
@@ -25,15 +25,15 @@ export default function Page() {
                         shouldPlay
                         source={{ uri: assets[0].uri }}
                         style={{ height: '100%', width: '100%' }} />}
-                <View className='flex flex-row items-end justify-center 
-                mb-10 gap-5 absolute bottom-0 left-0 right-0 px-20'>
+                <View className='flex flex-row items-end justify-center mb-10 
+                gap-5 absolute bottom-0 left-0 right-0 p-[20]'>
                     <Button
-                        style='flex-1 bg-gray-500'
+                        style='flex-1 bg-gray-500 rounded-3xl p-4 '
                         label='Login'
                         color='text-white'
                         onPress={() => router.push('/(auth)/login')} />
                     <Button
-                        style='flex-1 bg-white'
+                        style='flex-1 bg-white rounded-3xl p-4 '
                         label='Sign Up'
                         color='text-black'
                         onPress={() => router.push('/(auth)/email-sign-up')} />
